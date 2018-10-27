@@ -140,7 +140,7 @@ def clean_str(string):
     string = re.sub('([a-zA-Z])\\1+', '\\1\\1', string) # limit length of repeated letters to 2
     return string.strip().lower() 
 '''       
-#####################  Metadata and Class Definitions  ##################
+#####################  Metadata and Class Definitions  ###################
 class Tweet(object):
 
     def __init__(self, id, text, emotion, intensity):
