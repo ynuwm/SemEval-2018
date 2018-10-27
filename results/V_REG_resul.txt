@@ -1,0 +1,68 @@
+
+conv_1,2 + lstm_1,2,3
+	直接跑：
+	0.695，0.698  (batch_size:64, epoch:10)
+	0.760，0.756  (batch_size:32, epoch:12)
+	0.766, 0.761   (usename, 连字符，batchsize32，epoch12)
+
+	直接跑+dropout：0.718，0.712
+
+	直接跑+drop + AdaBoostRegressor: 0.6928，0.6841
+
+	直接跑+sgd：0.6929，0.6843
+
+
+conv_1,2 + bilstm_1,2,3
+    直接跑：
+ 
+	直接跑+dropout：0.747, 0.740
+
+	直接跑+drop+AdaBoostRegressor: 0.754, 0.749
+
+	直接跑+sgd：
+
+
+
+conv_1,2 + attention + lstm_1,2,3
+
+    直接跑：0.756, 0.747
+    直接跑+drop+AdaBoostRegressor： 0.734, 0.747
+
+
+
+单层LSTM：
+    0.769
+    0.775
+
+
+
+单层LSTM + 损失函数:
+MSE：0.804
+MAE：0.807 / 0.815 / 0.818   (epochs = 30)
+MAPE:0.815                  （epochs = 80 ）
+MSLE:0.801
+
+
+
+单层BiLSTM + 损失函数:
+MSE: 0.799  
+MAE: 0.818 /        0.820(取前四个)    (epochs = 25)   
+MAPE: 0.822                           （epochs = 80）
+      0.821                           （epochs = 80）
+MSLE: 0.801   （epochs = 10）
+
+双层BiLSTM + 损失函数:
+MSE: 0.805  
+MAE: 0.824          0.826(取前四个)    (epochs = 25)     
+MAPE: 0.822         0.827(取前两个)   （epochs = 80）
+MSLE: 0.806   （epochs = 10）
+
+
+
+
+
+
+
+
+
+
